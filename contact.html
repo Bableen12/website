@@ -1,0 +1,176 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sports</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+<link rel="stylesheet" href="sport.css">
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("hmeqI0juW_h1QYqkj");
+   })();
+</script>
+</head>
+
+<body>
+
+
+<section id="header">
+<a href="#"><img src="im1.png" class="logo" alt=""></a>
+
+<div>
+<ul id="navbar">
+
+<li><a  href="sport.html">Home</a></li>
+<li><a  href="shop.html">Shop</a></li>
+<li><a href="about.html">About</a></li>
+<li><a class="active" href="contact.html">Contact</a></li>
+<li id="1g-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+<a href="#" id="close"><i class="far fa-times"></i></a>
+
+</ul>
+</div>
+<div id="mobile">
+<a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+<i id="bar" class="fas fa-outdent"></i>
+</div>
+</section>
+
+
+<form id="form" >
+  <h1> CONTACT US</h1>
+  <div class="field">
+    <input type="text" name="name" id="name" placeholder="Name" required>
+  </div>
+  <div class="field">
+    <input type="text" name="email" id="email" placeholder="Email-Id" required>
+  </div>
+  <div class="field">
+    <input type="text" name="number" id="number" placeholder="Ph. No." required>
+  </div>
+  <div class="field">
+    <input type="text" name="message" id="message" placeholder="Any Queries?" required>
+  </div>
+
+  <input type="submit" id="button" value="Send Email" >
+<br><br><br><br><br><br><br><br>
+<h1>DIRECTIONS</h1>
+</form>
+
+<div class="dir">
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script></div>
+
+<script type="text/javascript">
+  emailjs.init('hmeqI0juW_h1QYqkj')
+</script>
+
+
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112210.99704706366!2d77.44813828152478!3d28.491781501686617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cebd8ca9d479f%3A0xb5b385c0cef8a94a!2sB%2032%2C%20Alpha%201%2C%20greater%20noida!5e0!3m2!1sen!2sin!4v1669651971385!5m2!1sen!2sin" width="1348" height="530" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+
+<footer class="section-p1">
+<div class="col">
+<img class="logo" src="im2.png" alt="">
+<h4>Contact</h4>
+<p><strong>Address: </strong>32/B, Greater Noida, Uttar Pradesh.</p>
+<p><strong>Hours: </strong>9am - 8pm, Mon-Sat</p>
+<div class="follow">
+<h4>Follow Us </h4>
+<div class="icon">
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-twitter"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-pinterest-p"></i>
+<i class="fab fa-youtube"></i>
+</div>
+</div>
+</div>
+
+<div class="col">
+<h4>About</h4>
+<a href="about.html">About Us</a>
+<a href="#">Delivery Information</a>
+<a href="about.html">Privacy Policy</a>
+<a href="about.html">Terms and Conditions</a>
+<a href="contact.html">Contact Us</a>
+</div>
+
+<div class="col">
+<h4>My Account</h4>
+<a href="signup.php">Sign In</a>
+<a href="cart.html">View Cart</a>
+<a href="#">Track My Orders</a>
+<a href="about.html">Help</a>
+</div>
+
+<div class="col install">
+<h4>Install App</h4>
+<p>From App Stoew or Google Play</p>
+<div class="row">
+<img src="img/pay/app.jpg" alt="">
+<img src="img/pay/play.jpg" alt="">
+</div>
+<p>Secured Payment Gateways</p>
+<img src="img/pay/pay.png" alt="">
+</div>
+<div class="copyright">
+<p>@bableen Kaur, JuzztPlayy</p>
+</div>
+</footer>
+
+<script>
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_qe2nzfa';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Query Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+
+
+
+
+
+</script>
+<div class="cursor">
+</div>
+ 
+<script src="sport.js"></script>
+
+<script>
+let cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", (evt) => {
+  cursor.style.top = evt.pageY + "px";
+  cursor.style.left = evt.pageX + "px";
+});
+</script>
+</body>
+</html>
+
+
+
+
